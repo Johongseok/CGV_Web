@@ -1,0 +1,646 @@
+@charset "utf-8";
+/* 폰트 크기 root 기준값 = 10px (10/16) */
+html {
+    font-size: 62.5%;
+}
+.w1200 {
+    max-width: 1200px;
+    width: 1200px;
+    margin: 0 auto;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#wrap {
+    width: 100%;
+}
+/* Aside SNB */
+aside {
+    height: 80px;
+    background-color: #6d0607;
+}
+aside .top_sub {
+    /* 플렉스 */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+aside .top_sub>div img:nth-child(2) {
+    cursor: pointer;
+}
+/* Header */
+
+header .lnb_all {
+    border-bottom: 1px solid #c9c9c9;
+}
+header .root_lnb {
+    /* 플렉스 */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    height: 112px;
+    background-color: #fff;
+}
+header .root_lnb>h1 {
+    margin: auto 0;    
+}
+header .root_lnb>h1 img {
+    width: 117px;
+    height: 53px;
+}
+
+header .local .lnb {
+    /* 플렉스 */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+header .local .lnb li {
+    margin-left: 36px;
+}
+header .local .lnb li:nth-child(1) {
+    margin-left: 0;
+}
+header .local .lnb li a {
+    display: flex;
+    flex-flow: column nowrap;
+}
+header .local .lnb li a img {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+header .local .lnb li a> p {
+    font-size: 13px;
+    color: #666;
+}
+/* GNB Menu */
+header .gnb_all {
+    border-bottom: 3px solid #fb4357;
+}
+header .gnb_all .global {
+    /* 플렉스 */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    height: 54px;
+    line-height: 54px;
+    font-size: 1.1rem;
+}
+header .gnb_all .global>h2 {
+    margin-top: 7px;
+}
+header .gnb_all .global>h2 a i {
+    font-size: 24px;
+}
+header .gnb_all .global .gnb {
+    /* 플렉스 */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+header .gnb_all .global .gnb li {
+    margin-right: 52px;
+}
+header .gnb_all .global .gnb li a {
+    color: #020202;
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: -0.4px;
+}
+header .gnb_all .global .gnb li a:hover {
+    color: #dd3616;
+    padding-bottom: 12px;
+}
+header .gnb_all .global .snb {
+    /* 플렉스 */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+header .gnb_all .global .snb li {
+    margin-left: 28px;
+}
+header .gnb_all .global .snb li a {
+    color: #020202;
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* Slider */
+article{
+    background-color: black;
+}
+/* Video Background */
+.video_wrapper {
+    width: 1200px;
+    height: 600px;
+    z-index: 1;
+    /* 포지션 */
+    position: relative;
+    background-color: black;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.video_wrapper .video {
+    transform: scale(1.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* Video Control Button */
+#car_btn {
+    /* 포지션 */
+    position: absolute;
+    bottom: 100px;
+    left: 45px;
+    z-index: 100;
+}
+#car_btn i {
+    font-size: 24px;
+    /* (24/936)*100 = 2.564102564102564 */
+    font-size: 2.5641vh;
+    color: #fff;
+    cursor: pointer;
+}
+#car_sound {
+    position: absolute;
+    bottom: 100px;
+    left: 80px;
+    z-index: 100;
+}
+#car_sound i {
+    font-size: 24px;
+    /* (24/936)*100 = 2.564102564102564 */
+    font-size: 2.5641vh;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Image Text */
+.video_text {
+    /* 포지션 */
+    position: absolute;
+    bottom: 150px;
+    left: 45px;
+    z-index: 200;
+}
+.video_text h2 {
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 72%);
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+.video_text p {
+    font-size: 20px;
+    max-width: 100%;
+    color: #fff;
+    line-height: 28px;
+}
+
+/* Contents */
+
+/* Section 01 */
+.md_pick {
+    /* 플렉스 */
+    display: flex;
+    padding-top: 180px;
+    padding-bottom: 142px;
+    /* 위치기준값 */
+    position: relative;
+}
+.md_pick h2 .md_pick_title {
+    color: #222;
+    font-weight: bold;
+    font-size: 36px;
+    /* 포지션 */
+    position: absolute;
+    left: 0;
+    top: 12%;
+    z-index: 1;
+}
+/* 로딩시 동영상 안보이게함 */
+.md_pick h2>div:nth-child(2),
+.md_pick h2>div:nth-child(3){
+    display: none;
+}
+.md_pick h3 {
+    text-align: center;
+    padding-top: 35px;
+}
+.md_pick .md_pick_area {
+    margin-top: 32px;
+    margin-left: 32px;
+}
+.md_pick .md_pick_area ul {
+    /* 플렉스 */
+    display: flex;
+}
+.md_pick .md_pick_area ul li {
+    margin-right: 10px;
+    /* 플렉스 */
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.chart_img {
+    width: 170px;
+}
+.chart_img img {
+    width: 100%;
+    height: 234px;
+    border-radius: 8px;
+}
+.chart_img>a {
+    /* 위치 기준값 */
+    position: relative;
+}
+.chart_img .chart_rank {
+    padding: 12px;
+    color: #fff;
+    font-size: 50px;
+    font-style: italic;
+    /* 포지션 */
+    position: absolute;
+    left: 0px;
+    top: 178px;
+    z-index: 1;
+}
+.chart_img .chart_age {
+    padding: 4px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(148, 148, 43);
+    border-radius: 4px;
+    /* 포지션 */
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    z-index: 1;
+}
+/* 셀로판지 효과 */
+.chart_img>a:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 234px;
+    border-radius: 8px;
+    background: rgb(19, 18, 18);
+    opacity: 0;
+    /* 포지션 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    transition: all 0.3s;
+}
+.chart_img a:hover:before {
+    opacity: 0.7;
+}
+/* 셀로판지 텍스트 */
+.chart_img a>div {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    border-radius: 4px;
+    color: #444444;
+    font-size: 12px;
+    font-weight: bold;
+    /* 포지션 */
+   position: absolute;
+   left: 85px;
+   top: 117px;
+   transform:translate(-50%, -50%);
+   z-index: 200;
+   opacity: 0;
+   transition: all 0,3;
+}
+.chart_img a:hover >div {
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.chart_content {
+    padding: 14px;
+    text-align: center;
+}
+.chart_content>h2 {
+    margin-bottom: 18px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.chart_content>div {
+    /* 플렉스 */
+    display: flex;
+    justify-content: center;
+    color: #444444;
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+.chart_content>div>p:nth-child(1){
+    padding-right: 4px;
+    border-right: 1px solid #ededed;
+}
+.chart_ticketing {
+    padding: 4px 12px;
+    background-color: #fb4357;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.chart_button {
+    text-align: right;
+    padding-top: 60px;
+}
+.chart_button>a {
+    width: 116px;
+    padding: 4px 15px 4px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #222;
+    background-color: #fff;
+    line-height: 1.4rem;
+    border: 1px solid #e2e2e2;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px 0 rgb(0 0 0 / 5%);
+}
+.chart_button img {
+    width: 10px;
+    height: 16px;
+}
+
+
+
+
+
+/* Section 02 */
+.real_title .real_time {
+    /* 플렉스 */
+    display: flex;
+    justify-content: space-between;
+    /* 교차축 레이아웃 */
+    padding: 142px 0 182px 0;
+}
+.real_title .real_time ul {
+    width: 40%;
+}
+.real_title .real_time ul li {
+    padding: 20px;
+    border-bottom: 1px solid #e3e3e3;
+    cursor: pointer;
+}
+.real_title .real_time ul li:first-child {
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 36px;
+    color: #222;
+    border: none;
+    cursor: none;
+}
+.real_title .real_time ul li:first-child:hover {
+    pointer-events: none;
+}
+.real_title .real_time ul li a {
+    font-size: 1.7rem;
+    color: #393939;
+    display: inline-block;
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+}
+.real_title .real_time ul li:hover {
+    border: 1px solid #000;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.real_title .real_time ul li a div {
+    /* 플렉스 */
+    display: flex;
+    justify-content: space-between;
+}
+.real_title .real_time ul li a div p:nth-child(2) {
+    padding: 0px 7px;
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    color: #666;
+    font-size: 12px;
+
+}
+.real_title figure div img {
+    width: 640px;
+    height: 450px;
+}
+
+/* 로딩시 첫번째 이미지만 보이게함 */
+.real_title figure div:nth-child(2),
+.real_title figure div:nth-child(3),
+.real_title figure div:nth-child(4) {
+    display: none;
+}
+
+/* Section 03 */
+.category_product_wrap>h2 {
+    margin-bottom: 60px;
+    color: #222;
+    font-weight: bold;
+    font-size: 36px;
+}
+.category_product_list {
+    width: 100%;
+    display: flex;
+}
+.category_product_list li {
+    width: 25%;
+    margin-right: 1%;
+}
+.category_product_list li:last-child {
+    margin-right: 0;
+}
+.category_product_title {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #999;
+    /* 플렉스 */
+    display: flex;
+    justify-content: space-between;
+}
+.category_product_title>p {
+    font-size: 24px;
+}
+.category_product_title>a {
+    margin-top: 10px;
+}
+.category_product_inner_list>li {
+    width: 100%;
+    height: 160px;  
+    border: 1px solid #e3e3e3;
+    margin-bottom: 12px;
+    /* 위치기준값 */
+    position: relative;
+}
+/* 셀로판지 */
+.category_product_inner_list>li a:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 160px;
+    background-color: rgb(37, 35, 35);
+    opacity: 0;
+    /* 포지션 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    transition: 0.3s all;
+}
+.category_product_inner_list>li a:hover:before {
+    opacity: 0.7;
+}
+/* 셀로판지 텍스트 */
+.category_product_inner_list>li a .product_link {
+    height: 90px;
+    /* 포지션 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%);
+    z-index: 200;
+    opacity: 0;
+    transition: all 0.3s;
+    /* 플렉스 */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+}
+.category_product_inner_list>li a .product_link p {
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    border-radius: 4px;
+    color: #444444;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+.category_product_inner_list>li a .product_link p:first-child {
+    background-color: #fb4357;
+    color: #fff;
+}
+
+.category_product_inner_list>li a:hover .product_link{
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.category_product_inner_list>li a {
+    /* 플렉스 */
+    display: flex;
+    justify-content: space-between;
+    padding-right: 16px;
+}
+.product_image img {
+    width: 160px;
+    height: 156px;
+}
+.product_text {
+    /* 플렉스 */
+    display: flex;
+    flex-flow: column nowrap;   
+    justify-content: center;
+    text-align: center;
+}
+.product_text>h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.product_text>h4 {
+    font-size: 14px;
+    color: #6A6F77;
+    margin-bottom: 20px;
+}
+.product_text>p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* Footer */
+footer {
+    margin-top: 106px;
+    background-color: #1d1c2e;
+    padding-top: 24px;
+    padding-bottom: 54px;
+    line-height: 1.5;
+}
+.footer_information {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-left: 72px;
+    padding-right: 68px;
+}
+.footer_left ,
+.footer_contact {
+    margin-top: 40px;
+}
+.footer_gnb {
+    display: flex;
+    color: #eeeef0;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+.footer_info {
+    font-size: 1.2rem;
+    color: #9a9c9b;
+    font-weight: 400;
+}
+.footer_escrow {
+    display: flex;
+    margin-top: 26px;
+}
+.footer_escrow span {
+    display: inline-block;
+    margin-right: 46px;
+}
+.footer_info>p:last-child {
+    margin-top: 32px;
+}
+.footer_contact {
+    color: #cccdd1;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+.footer_contact dl:first-child dt+dd {
+    font-size: 2.2rem;
+}
+.footer_contact dl:first-child dt+dd+dd {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #a8a9ad;
+    margin-bottom: 42px;
+}
+.footer_contact dl:last-child dt+dd {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.footer_contact dl:last-child dt+dd+dd {
+    font-size: 1.3rem;
+    color: #a4a5aa;
+}
